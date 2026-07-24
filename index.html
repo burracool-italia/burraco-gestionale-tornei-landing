@@ -198,53 +198,6 @@ h2.sezione {
 .voce-testo h3 { margin: 6px 0 4px; font-size: 15.5px; font-weight: 700; overflow-wrap: break-word; }
 .voce-testo p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--inchiostro-tenue); overflow-wrap: break-word; }
 
-.riquadro-demo {
-  background: var(--blu-tenue);
-  border: 1px solid var(--blu-tenue-bordo);
-  border-radius: 16px;
-  padding: 20px 22px;
-  margin-top: 28px;
-}
-.riquadro-demo h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--blu-scuro);
-}
-.riquadro-demo p {
-  margin: 0 0 14px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--inchiostro);
-}
-.riga-demo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  background: var(--superficie);
-  border: 1px solid var(--blu-tenue-bordo);
-  border-radius: 10px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
-}
-.riga-demo:last-child { margin-bottom: 0; }
-.riga-demo .etichetta { font-size: 11px; color: var(--inchiostro-tenue); text-transform: uppercase; letter-spacing: 0.04em; }
-.riga-demo .valore { font-size: 14.5px; font-weight: 700; word-break: break-all; }
-.riga-demo .testo { min-width: 0; flex: 1 1 auto; }
-.bottone-copia {
-  flex: 0 0 auto;
-  border: 1px solid var(--blu-tenue-bordo);
-  background: var(--blu-tenue);
-  color: var(--blu-primario);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.bottone-copia:hover { background: var(--blu-primario); color: #fff; }
-
 footer.pagina-footer {
   margin-top: 56px;
   padding-top: 22px;
@@ -277,32 +230,6 @@ footer.pagina-footer a:hover { text-decoration: underline; }
     </a>
   </div>
   <p class="cta-nota">App in fase di test — diventa tester per installarla, gratis, in pochi tocchi.</p>
-
-  <div class="riquadro-demo">
-    <h3>👀 Vuoi solo dare un'occhiata?</h3>
-    <p>Dopo aver installato l'app, invece di registrarti puoi <strong>accedere</strong> con un account demo già dentro un torneo vero in corso (il Torneo dei Nobel) — niente registrazione, vedi subito l'app "viva".</p>
-    <div class="riga-demo">
-      <div class="testo">
-        <div class="etichetta">Email</div>
-        <div class="valore" id="demoEmail">enrico.fermi@gmail.com</div>
-      </div>
-      <button class="bottone-copia" data-copia="demoEmail" type="button">Copia</button>
-    </div>
-    <div class="riga-demo">
-      <div class="testo">
-        <div class="etichetta">Password</div>
-        <div class="valore" id="demoPassword">enrico</div>
-      </div>
-      <button class="bottone-copia" data-copia="demoPassword" type="button">Copia</button>
-    </div>
-    <div class="riga-demo">
-      <div class="testo">
-        <div class="etichetta">Circolo (da "Aggiungi circolo")</div>
-        <div class="valore" id="demoCircolo">https://robertomastro.github.io/url_di_login_burraco/?server=https%3A%2F%2Fmerlyn-photoreceptive-ordinally.ngrok-free.dev&locale=TorneoDemo</div>
-      </div>
-      <button class="bottone-copia" data-copia="demoCircolo" type="button">Copia</button>
-    </div>
-  </div>
 
   <p class="descrizione">
     Burraco — il tuo torneo è l'app per seguire in tempo reale i tornei di burraco organizzati nel tuo circolo:
@@ -426,18 +353,6 @@ footer.pagina-footer a:hover { text-decoration: underline; }
       if (mosso) { e.preventDefault(); e.stopPropagation(); mosso = false; }
     }, true);
   })();
-
-  // Pulsanti "Copia" del riquadro demo (email/password/link circolo)
-  document.querySelectorAll('.bottone-copia').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var testo = document.getElementById(btn.dataset.copia).textContent.trim();
-      navigator.clipboard.writeText(testo).then(function () {
-        var originale = btn.textContent;
-        btn.textContent = 'Copiato ✓';
-        setTimeout(function () { btn.textContent = originale; }, 1500);
-      });
-    });
-  });
 </script>
 </body>
 </html>
