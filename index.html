@@ -107,6 +107,15 @@ html, body {
   margin-top: 10px;
 }
 
+
+.istruzioni {
+  margin-top: 22px; padding: 16px 18px;
+  background: var(--blu-tenue); border: 1px solid var(--blu-tenue-bordo);
+  border-radius: 14px; font-size: 14px; line-height: 1.6; color: var(--inchiostro);
+}
+.istruzioni p { margin: 8px 0 0; }
+.istruzioni a { color: var(--blu-primario); font-weight: 700; }
+
 .descrizione {
   margin-top: 40px;
   font-size: 16px;
@@ -222,14 +231,18 @@ footer.pagina-footer a:hover { text-decoration: underline; }
   </div>
 
   <div class="cta-riga">
-    <a class="bottone-cta bottone-android" href="https://github.com/burracool-italia/gestionale-burraco-releases/releases/download/android/burraco_il_tuo_torneo.apk" target="_blank" rel="noopener">
-      🤖 Scarica per Android
-    </a>
-    <a class="bottone-cta bottone-ios" href="https://testflight.apple.com/join/S3u1emaU" target="_blank" rel="noopener">
-      🍎 Scarica per iPhone
+    <a class="bottone-cta bottone-android" href="https://burracool-italia.github.io/burraco-web/" rel="noopener">
+      📱 Apri Burraco sul telefono
     </a>
   </div>
-  <p class="cta-nota">Su iPhone si installa in pochi tocchi; su Android scarica e installa il file direttamente.</p>
+  <p class="cta-nota">Nessun download: si apre dal browser, su Android e su iPhone.</p>
+
+  <div class="istruzioni">
+    <b>Per averla sempre a portata di mano</b>
+    <p><strong>Android (Chrome):</strong> menu ⋮ → «Installa app» (o «Aggiungi a schermata Home»).<br>
+       <strong>iPhone (Safari):</strong> tasto Condividi ⬆ → «Aggiungi alla schermata Home», poi apri Burraco da lì.</p>
+    <p><a href="https://burracool-italia.github.io/burraco-web/guida.html">Guida passo passo</a></p>
+  </div>
 
   <p class="descrizione">
     Burraco — il tuo torneo è l'app per seguire in tempo reale i tornei di burraco organizzati nel tuo circolo:
